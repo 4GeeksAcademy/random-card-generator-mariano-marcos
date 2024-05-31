@@ -1,1 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional: Set a background color for better visibility */
+}
+
+.card-container {
+  width: 25rem;
+  height: 35rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  background-color: white;
+}
+
+.card-header {
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.card-header.top {
+  /* top: 0;
+  left: 0; */
+  text-align: left;
+  bottom: 75%;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.card-header.bottom {
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  transform: rotate(180deg);
+  /* margin: 0;
+  padding: 0; */
+}
+
+.card-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-suit {
+  font-size: 8rem;
+  margin-left: 1.5rem;
+  margin-top: -3rem;
+  padding: 0;
+}
