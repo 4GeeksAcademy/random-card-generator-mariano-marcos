@@ -6,17 +6,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Optional: Set a background color for better visibility */
+  background-color: #2b2b2b; /* Dark background for a casino night feel */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .card-container {
-  width: 25rem;
-  height: 35rem;
+  width: 80vw; /* Responsive width */
+  max-width: 25rem; /* Maximum width */
+  height: calc(80vw * 1.4); /* Maintain aspect ratio */
+  max-height: 35rem; /* Maximum height */
   border: 2px solid #000;
   border-radius: 10px;
   position: relative;
   font-family: "Arial", sans-serif;
   background-color: white;
+  box-sizing: border-box;
 }
 
 .card-header {
@@ -26,16 +37,13 @@ body {
   border: none;
   background-color: transparent;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 .card-header.top {
-  /* top: 0;
-  left: 0; */
+  top: 0;
+  left: 0;
   text-align: left;
-  bottom: 75%;
-  /* margin: 0;
-  padding: 0; */
 }
 
 .card-header.bottom {
@@ -45,8 +53,6 @@ body {
   align-items: flex-end;
   text-align: left;
   transform: rotate(180deg);
-  /* margin: 0;
-  padding: 0; */
 }
 
 .card-center {
@@ -54,14 +60,38 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14rem;
+  font-size: 14vw; /* Responsive font size */
+  max-font-size: 14rem; /* Maximum font size */
   font-weight: bold;
   text-align: center;
 }
 
 .card-suit {
-  font-size: 8rem;
+  font-size: 6vw; /* Responsive font size */
+  max-font-size: 8rem; /* Maximum font size */
   margin-left: 1.5rem;
-  margin-top: -3rem;
+  margin-top: -1.5rem;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#deal-card-button {
+  background-color: #c8102e; /* Casino red */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#deal-card-button:hover {
+  background-color: #a10c24; /* Darker red on hover */
 }
